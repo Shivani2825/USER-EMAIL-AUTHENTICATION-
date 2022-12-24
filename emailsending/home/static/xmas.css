@@ -1,0 +1,219 @@
+body {
+	margin: 0;
+	padding-top: 50px;
+	overflow: hidden;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #002b36;
+}
+
+.note {
+	font-family: "Great Vibes", cursive;
+	font-size: 1rem;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: whitesmoke;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.xmas-tree {
+	width: 500px;
+	height: 590px;
+	position: relative;
+	z-index: -2;
+}
+
+.star {
+	position: absolute;
+	left: 50%;
+	top: 15%;
+	margin-left: -22px;
+	font-size: 40px;
+	z-index: 3;
+	color: rgb(255, 252, 0);
+	animation: spin 2s infinite linear forwards;
+	text-shadow: 0 0 20px rgb(255, 252, 0.4);
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+.t1 {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -100px;
+	border-right: 100px solid transparent;
+	border-left: 100px solid transparent;
+	border-bottom: 100px solid #2bd937;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	z-index: 2;
+}
+
+.t2 {
+	position: absolute;
+	top: 27%;
+	left: 50%;
+	margin-left: -125px;
+	border-right: 125px solid transparent;
+	border-left: 125px solid transparent;
+	border-bottom: 125px solid #26bd30;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	z-index: 1;
+}
+
+.t3 {
+	top: 34%;
+	left: 50%;
+	margin-left: -150px;
+	position: absolute;
+	border-right: 150px solid transparent;
+	border-left: 150px solid transparent;
+	border-bottom: 150px solid #1f9927;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+
+.t1::before,
+.t1::after,
+.t2::before,
+.t2::after,
+.t3::before,
+.t3::after {
+	position: absolute;
+	content: "";
+	width: 10px;
+	height: 20px;
+	border-radius: 50%;
+	background: #d6d400;
+	z-index: 3;
+	animation: blink 1.5s infinite;
+}
+
+.t2::before {
+	animation-delay: 0.5s;
+}
+
+.t2::after {
+	animation-delay: 0.5s;
+}
+
+.t3::before {
+	animation-delay: 1s;
+}
+
+.t3::after {
+	animation-delay: 1s;
+}
+
+@keyframes blink {
+	30% {
+		background: rgb(255, 252, 0);
+		box-shadow: 0 0 20px 10px rgba(255, 252, 0, 0.35);
+	}
+	60% {
+		background: #d6d400;
+		box-shadow: 0 0 0px 0px rgba(255, 252, 0, 0.35);
+	}
+}
+
+.t1::before {
+	top: 77px;
+	left: -82px;
+}
+
+.t1::after {
+	top: 77px;
+	right: -82px;
+}
+
+.t2::before {
+	top: 98px;
+	left: -103px;
+}
+
+.t2::after {
+	top: 98px;
+	right: -103px;
+}
+
+.t3::before {
+	top: 118px;
+	left: -122px;
+}
+
+.t3::after {
+	top: 118px;
+	right: -122px;
+}
+
+.stem {
+	position: absolute;
+	top: 53%;
+	left: 50%;
+	margin-left: -20px;
+	width: 40px;
+	height: 100px;
+	z-index: -1;
+	background: #694215;
+}
+
+.snow-ground {
+	position: absolute;
+	width: 120px;
+	height: 30px;
+	background: whitesmoke;
+	top: 67%;
+	left: 50%;
+	margin-left: -60px;
+	z-index: -5;
+	border-radius: 50%;
+}
+
+.snow {
+	position: absolute;
+	top: -10px;
+	background: lightblue;
+	border-radius: 50%;
+	animation: fall linear;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(105vh);
+	}
+}
+
+@font-face {
+    font-family: 'Mountains of Christmas';
+    font-style: normal;
+    src: local("Mountains of Christmas"), local("MountainsofChristmas-Regular"), url(https://fonts.gstatic.com/s/mountainsofchristmas/v8/dVGBFPwd6G44IWDbQtPewylJhLDHyIrT3I5b5eGTHmw.woff2) format("woff2"); }
+
+.message{
+    
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  margin-top: 80px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: #f46200;
+  font-family: 'Mountains of Christmas'; }
+  .message h1 {
+    font-style: normal;
+    font-size: 75px;
+    margin-bottom: 0;
+    white-space: nowrap; 
+}

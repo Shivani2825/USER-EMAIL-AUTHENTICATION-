@@ -1,0 +1,38 @@
+
+{% load static%}
+<head>
+<link href="{% static 'style.css' %}" rel="stylesheet"/>
+</head>
+<div class="login-box">
+    <h2>Registration</h2>
+    <form action="sendemail" method="POST">
+      {% csrf_token %}
+      <div class="user-box">
+        <input type="text" name="fname" required="">
+        <label>First Name</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="lname" required="">
+        <label>Last Name</label>
+      </div>
+      <div class="user-box">
+        <input type="email" name="email" required="">
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="phone" required="">
+        <label>Mobile No.</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="pwd" required="">
+        <label>Password</label>
+      </div>
+      <button type='submit'>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </button>
+    </form>
+  </div>

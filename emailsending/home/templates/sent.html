@@ -1,0 +1,37 @@
+{% load static %}
+<head>
+    <link href="{% static 'xmas.css' %}" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+    </head>
+	
+	<div class="xmas-tree">
+		<div class="star"><i class="fas fa-star"></i></div>
+		<div class="t1"></div>
+		<div class="t2"></div>
+		<div class="t3"></div>
+		<div class="stem"></div>
+		<div class="snow-ground"></div>
+	</div>
+    <div class="message">
+        <h1>Merry Christmas!</h1>
+    </div>
+    <script>
+        setInterval(makeSnow, 40);
+
+function makeSnow() {
+	const snow = document.createElement("div");
+	const size = Math.random() * 4.5 + 3.5;
+	snow.className = "snow";
+	snow.style.width = size + "px";
+	snow.style.height = size + "px";
+	snow.style.left = Math.random() * window.innerWidth + "px";
+	snow.style.opacity = size / 8;
+	if (size < 7) {
+		snow.style.zIndex = -5;
+	}
+	snow.style.animationDuration = Math.random() * 3 + 2 + "s";
+	document.body.appendChild(snow);
+	setTimeout(() => snow.remove(), 5000);
+}
+
+    </script>
